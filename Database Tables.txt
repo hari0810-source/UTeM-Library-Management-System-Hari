@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS borrow_records (
     return_date DATETIME DEFAULT NULL,
     status VARCHAR(20) DEFAULT 'Borrowed',
     fine DECIMAL(10,2) DEFAULT 0.00,
-    -- Foreign Keys link to the other tables
     FOREIGN KEY (username) REFERENCES users(username),
     FOREIGN KEY (isbn) REFERENCES books(isbn)
+
 );
